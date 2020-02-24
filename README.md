@@ -21,7 +21,7 @@ $poster
 
 ### 安装
 ```
-composer require moonwalkercui/postermaker
+composer require moonwalkercui/postermaker:0.1.3
 ```
 ### addImg
 按大小创建一个海报 

@@ -48,8 +48,9 @@ class PosterMaker
      * @param $font_file string 字体路径
      * @param $angle int 文字旋转角度
      */
-    public function addText($text, $size = 14, $xy = [0, 0], $color = [0, 0, 0], $font_file = 'msyh.ttc', $angle = 0)
+    public function addText($text, $size = 14, $xy = [0, 0], $color = [0, 0, 0], $font_file = '', $angle = 0)
     {
+        if($font_file == '') $font_file = __DIR__ . DIRECTORY_SEPARATOR . 'msyh.ttc';
         $font_color = ImageColorAllocate($this->bg, $color[0], $color[1], $color[2]);
         imagettftext($this->bg, $size, $angle, $xy[0], $xy[1], $font_color, $font_file, $text);
         return $this;
