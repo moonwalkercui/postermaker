@@ -1,5 +1,5 @@
 {
-    "name": "Ryan/postermaker",
+    "name": "moonwalkercui/postermaker",
     "description": "A poster maker base on GD lib. 一个用php生成海报的神器。",
     "license": "MIT",
     "authors": [
