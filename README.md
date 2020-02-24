@@ -5,8 +5,8 @@ A poster make base on gd lib. (PHP)  一个用php生成海报的神器
 
 比如在文件someaction.php中使用：
 ```
-$poser = new \PosterMaker\Postermaker(800, 1100);
-$poser
+$poster = new \PosterMaker\Postermaker(800, 1100);
+$poster
     ->addImg('./bg.jpg', [0,0], [800, 1100])
     ->addImg('./data/upload/cover.jpg', [30,30],[740, 500])
     ->addImg('./data/upload/avatar.png', [520,620],[200, 200])
@@ -26,29 +26,29 @@ composer require moonwalkercui/postermaker
 ### addImg
 按大小创建一个海报 
 ```
-$poser = new \PosterMaker\Postermaker(800, 1100); // (width, height)
+$poster = new \PosterMaker\Postermaker(800, 1100); // (width, height)
 ```
 ### addImg
 添加图片 (图片路径, [x坐标, y坐标], [width, height])
 ```
-$poser->addImg('./data/upload/cover.jpg', [30,30],[740, 500])
+$poster->addImg('./data/upload/cover.jpg', [30,30],[740, 500])
 ```
 ### addText
 添加图片 (文字内容, 字体大小, [x坐标, y坐标], 颜色[R,G,B])
 ```
-$poser->addText('2020雅思口语刷题班', 30, [30,610], [255, 255, 255])
+$poster->addText('2020雅思口语刷题班', 30, [30,610], [255, 255, 255])
 ```
 ### addQrCode
 添加二维码 (文字内容, [x坐标, y坐标], [width, height])
 ```
-$poser->addQrCode('http://com/123', [500,800],[250,250])
+$poster->addQrCode('http://com/123', [500,800],[250,250])
 ```
 ### render
 添加图片 (文字内容, 字体大小, [x坐标, y坐标], 颜色[R,G,B])
 ```
-$poser->render('./save.png'); // 保持为图片
+$poster->render('./save.png'); // 保持为图片
 // or
-$poser->render(); // show image in html: `<img src="someaction.php" style="border-radius: 20px;"/>`
+$poster->render(); // show image in html: `<img src="someaction.php" style="border-radius: 20px;"/>`
 ```
 
 # Author
