@@ -1,0 +1,19 @@
+{
+    "name": "Ryan/postermaker",
+    "description": "A poster maker base on GD lib. 一个用php生成海报的神器。",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan",
+            "email": "541720500@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "PosterMaker\\": "src/"
+        }
+    }
+}
