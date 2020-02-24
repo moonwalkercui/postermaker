@@ -1,7 +1,7 @@
 # Postermaker 海报生成器
 A poster make base on gd lib. (PHP)  一个用php生成海报的神器
 
-# Useage 用法
+# Usage 用法
 
 比如在文件someaction.php中使用：
 ```
@@ -49,6 +49,15 @@ $poster->addQrCode('http://com/123', [500,800],[250,250])
 $poster->render('./save.png'); // 保持为图片
 // or
 $poster->render(); // show image in html: `<img src="someaction.php" style="border-radius: 20px;"/>`
+```
+# Thinkphp等框架里中的使用
+因为有些php框架的控制器默认输出html，所以如果在控制器里直接输出图片的话，需要在控制器最后一行加上：
+```
+return response()->contentType('image/png');
+```
+或者用exit
+```
+exit();
 ```
 
 # Author
