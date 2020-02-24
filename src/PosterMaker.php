@@ -1,7 +1,5 @@
 <?php
-
-namespace Ryan\PosterMaker;
-
+namespace PosterMaker;
 class PosterMaker
 {
     public $bg; // 背景图

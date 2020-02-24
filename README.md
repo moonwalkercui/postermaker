@@ -2,9 +2,10 @@
 A poster make base on gd lib. (PHP)  一个用php生成海报的神器
 
 # Useage 用法
+
 比如在文件someaction.php中使用：
 ```
-$poser = new \Ryan\postermaker(800, 1100);
+$poser = new \PosterMaker\Postermaker(800, 1100);
 $poser
     ->addImg('./bg.jpg', [0,0], [800, 1100])
     ->addImg('./data/upload/cover.jpg', [30,30],[740, 500])
@@ -17,10 +18,15 @@ $poser
     ->addQrCode('http://com/123', [500,800],[250,250])
     ->render();
 ```
+
+### 安装
+```
+composer require moonwalkercui/postermaker
+```
 ### addImg
 按大小创建一个海报 
 ```
-$poser = new \Ryan\postermaker(800, 1100); // (width, height)
+$poser = new \PosterMaker\Postermaker(800, 1100); // (width, height)
 ```
 ### addImg
 添加图片 (图片路径, [x坐标, y坐标], [width, height])
